@@ -129,8 +129,9 @@ session_start();
             
 			  <li><a href="leave.php"><i class="icon-form"></i>Leaves
 			</a></li>
-			<li><a href="date.php"><i class="icon-form"></i>Check-In 
+			<li><a href="date.php"><i class="icon-form"></i>Datepicker 
 			</a></li>
+			
 		
 			
             

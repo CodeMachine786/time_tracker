@@ -13,39 +13,17 @@ session_start();
                header('location:login.php') ;
             }
    $id=$_SESSION['id'];
-   
- 
    $username=$_SESSION['user'];
+  
    $email=$_SESSION['email'];
-   //print_r($email);die;
-  // print_r($username);die;
-		       $b=time_select($conn,$id);
+  $b=time_select($conn,$id);
 	//print_r($b);die;
 			  $a=select_users($conn,$id);
+			 
 			
 		
 	
-	 ob_start();
-//Get the ipconfig details using system commond
-system('ipconfig');
- 
-// Capture the output into a variable
-$mycom=ob_get_contents();
-//echo $mycom;die;
-// Clean (erase) the output buffer
-ob_clean();
- 
-$findme = "IPv4";
-//Search the "Physical" | Find the position of Physical text
-$ip = strpos($mycom, $findme);
-
- 
-
-$ipadd=substr($mycom,($ip+36),30);
-
-$ipaddfinal= trim($ipadd,"( Subnet Mask .)");
-$_SESSION['ipadd']= $ipaddfinal;
-//		
+	 
 ?>
 	
     <!-- Side Navbar -->

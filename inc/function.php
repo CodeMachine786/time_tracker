@@ -235,17 +235,13 @@ function time_select($conn,$id){
 }
 
 function select_time($conn){
-	$stmt=$conn->prepare("SELECT * FROM employ_table");
+	$stmt=$conn->prepare("SELECT * FROM tbl_user");
 	$stmt->execute();
 	
 	$res=$stmt->fetchAll(PDO::FETCH_ASSOC);
 	
 	return $res;
 }
-
-
-
-
 
 
 
